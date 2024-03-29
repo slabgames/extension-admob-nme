@@ -1,0 +1,8 @@
+HOW TO UPDATE IOS VERSION:
+1. Download latest SDK from here: https://developers.google.com/admob/ios/download
+2. Exctract .framework folder from every .xcframework/ios-arm64 folder
+3. Copy all the .framework to extension-admob/frameworks
+4. Open include.xml and make sure that the list of frameworks matches
+5. Check the SKAdNetwork list here: https://developers.google.com/admob/ios/ios14 and update the current list here, if required: \extension-admob\templates\ios\template\{{app.file}}\extension-admob-Info.plist 
+6. "lime rebuild extension-admob ios -clean"
+7. PROFIT???

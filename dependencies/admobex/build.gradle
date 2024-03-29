@@ -1,0 +1,20 @@
+apply plugin: 'com.android.library'
+
+android {
+	namespace 'com.admobex'
+	sourceSets {
+		main {
+			manifest.srcFile 'AndroidManifest.xml'
+			java.srcDirs = ['src']
+			res.srcDirs = ['res']
+		}
+	}
+	compileSdkVersion 34
+	buildToolsVersion "34.0.0"
+}
+
+dependencies {
+	implementation project(':extension-api')
+	implementation 'com.google.android.gms:play-services-ads:::SET_PLAY_SERVICES_VERSION::'
+	implementation 'com.google.android.ump:user-messaging-platform:2.1.0'
+}
